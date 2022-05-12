@@ -1,0 +1,57 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="hero-white">
+        <div class="header clearfix">
+            {% include 'shop/menu.html' with active_products='active' %}
+        </div>
+    </div>
+
+    <div class="details">
+        <div class="links clearfix">
+            <ul class="links-menu menu-products">
+                <li><a href="#" class="active" data-category="all">все</a></li>
+                <li><a href="#" data-category="chair">Стулья</a></li>
+                <li><a href="#" data-category="lamp">Лампы</a></li>
+                <li><a href="#" data-category="kitchen">Для кухни</a></li>
+            </ul>
+        </div>
+        <div class="container">
+
+            <div class="products height d-flex align-content-around justify-content-center flex-wrap">
+
+                <div class="card-template card p-3 col-12 col-lg-3 m-1" hidden>
+                    <div class="wrapper h-100">
+                        <div class="d-flex justify-content-between align-items-center ">
+                            <div class="mt-2">
+                                <h4 class="product-name text-uppercase"></h4>
+                                <div class="mt-5">
+                                    <div class="d-flex flex-row user-ratings">
+                                        <div class="ratings">
+                                            <i class="template fa fa-star"></i>
+                                            <i class="template fa fa-star-o"></i>
+                                        </div>
+                                        <h6 class="product-rating text-muted ms-1"></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image">
+                                <img class="product-image" src="" width="110">
+                            </div>
+                        </div>
+                        <p class="product-description"></p>
+                    </div>
+                    <p class="product-price"></p>
+                    <button class="btn btn-danger">Купить</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+</div>
+<script src="{% static 'shop/js/products.js' %}"></script>
+{% endblock content %}
