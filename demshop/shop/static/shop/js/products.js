@@ -139,6 +139,8 @@ const productsPage = {
 
         const categoryRequired = link.dataset.category;
 
+        this.selectNewCategoryInMenu(link);
+
         let products_tmp = null;
 
         if (categoryRequired !== 'all') {
@@ -149,7 +151,20 @@ const productsPage = {
 
         this.renderPage(products_tmp);
 
+    },
+    resetCategoryMenu() {
+        let categories = document.querySelectorAll('.menu-products a');
+        categories.forEach(tag => {
+            if (tag.classList.contains('active')) {
+                tag.classList.remove('active')
+            }
+        });
+    },
+    selectNewCategoryInMenu(link) {
+        this.resetCategoryMenu();
+        link.classList.add('active');
     }
+
 };
 
 
