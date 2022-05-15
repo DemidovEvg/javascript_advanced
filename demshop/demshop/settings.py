@@ -1,6 +1,6 @@
 from pathlib import Path
 from environs import Env
-
+import mimetypes
 
 env = Env()
 env.read_env()
@@ -14,6 +14,7 @@ DEBUG = env.bool('DEBUG')
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
+mimetypes.add_type("application/javascript", ".js", True)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
