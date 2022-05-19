@@ -1,5 +1,6 @@
 import { ProductList } from './product_list.js';
 import { ProductMenu } from './product_menu.js';
+import { spinnerShow } from '../utils.js';
 
 export class ProductPage {
     constructor(config = {
@@ -19,11 +20,13 @@ export class ProductPage {
             container_selector: this.config.productContainerSelector
         });
     }
-    renderPage(category = 'all') {
+    async renderPage(category = 'all') {
         this.deleteOldCards();
-        this.productList.updateData(category);
+        spinnerShow(this.config.productContainerSelector);
+        await this.productList.updateData(category);
         this.productList.renderProductList();
     }
+
     deleteOldCards() {
         let cards = document.querySelectorAll('.products .card');
         cards.forEach(card => card.remove());
