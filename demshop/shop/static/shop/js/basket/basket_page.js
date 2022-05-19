@@ -1,5 +1,5 @@
 import { SelectedProductList } from './selected_product_list.js';
-
+import { spinnerShow } from '../utils.js';
 
 export class BasketPage {
     constructor(config = {
@@ -16,8 +16,12 @@ export class BasketPage {
         this.basket.addEventListener('click', (event) => this.removeProduct(event))
     }
 
-    renderPage() {
+    async renderPage() {
+        spinnerShow(this.config.basketSelector);
         this.deleteOldCards();
+        if (!this.selectedProductList.isDataFetched()) {
+            await this.selectedProductList.fetchSelectedProductData();
+        }
         this.selectedProductList.renderProductList();
         this.renderBasketValue();
     }
