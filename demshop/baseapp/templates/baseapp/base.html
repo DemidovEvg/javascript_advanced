@@ -1,0 +1,50 @@
+{% load static %}
+{% load bootstrap5 %}
+
+<!DOCTYPE html>
+<html class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <title>Магазин</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'shop/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    {% bootstrap_css %}
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <div class="wrapper">
+        {% block content %}
+        {% endblock content %}
+
+    </div>
+    <footer class="container mt-auto d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+            <span class="text-muted">© 2021 Company, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex me-3">
+            <li class="ms-3">
+                <a class="text-muted" href="#">
+                    <img src="{% static 'shop/img/footer/twitter.svg' %}" alt="">
+                </a>
+            </li>
+            <li class="ms-3">
+                <a class="text-muted" href="#">
+                    <img src="{% static 'shop/img/footer/vk.svg' %}" alt="">
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    {% bootstrap_javascript %}
+</body>
+
+</html>

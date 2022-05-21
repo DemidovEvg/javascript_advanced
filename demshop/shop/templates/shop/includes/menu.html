@@ -1,0 +1,69 @@
+{% load static %}
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a href="{% url 'main' %}">
+                <img src="{% static 'shop/img/logo.png' %}" alt="" width="185" height="22">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="{% url 'js_products' %}"
+                            class="nav-link {% if request.resolver_match.url_name == 'js_products' %}active{% endif %}">
+                            Продукты</br> (для курса JS)
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'django_products' %}"
+                            class="nav-link {% if request.resolver_match.url_name == 'django_products' %}active{% endif %}">
+                            Продукты</br> (для курса Django)
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'contact' %}"
+                            class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+                            Контакты
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'js_basket' %}"
+                            class="nav-link {% if request.resolver_match.url_name == 'js_basket' %}active{% endif %}">
+                            Корзина</br> (для курса JS)
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'django_basket' %}"
+                            class="nav-link {% if request.resolver_match.url_name == 'django_basket' %}active{% endif %}">
+                            Корзина</br> (для курса Django)
+                        </a>
+                    </li>
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+
+                        <a href="{% url 'baseapp:index' %}" class="nav-link">
+                            <img src="{% static 'shop/img/menu/person.svg' %}" alt="">
+                            {{ request.user.username }}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'accounts:log_out' %}" class="nav-link">
+                            Выйти
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a href="{% url 'accounts:log_in' %}" class="nav-link">
+                            Войти
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

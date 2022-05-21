@@ -1,11 +1,11 @@
-{% extends 'shop/base.html' %}
+{% extends 'baseapp/base.html' %}
 {% load static %}
 
 {% block content %}
 <div class="container">
     <div class="hero">
         <div class="header clearfix">
-            {% include 'shop/menu.html' with active_contact='active' %}
+            {% include 'shop/includes/menu.html' %}
         </div>
         <h1>наши контакты</h1>
     </div>

@@ -1,0 +1,72 @@
+{% extends 'baseapp/base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'shop/includes/menu.html' %}
+
+<div class="container my-1">
+    <ul class="nav nav-tabs menu-products">
+        <li class="nav-item">
+            <a class="nav-link text-dark active" aria-current="page" href="#" data-category="all">
+                Все
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" aria-current="page" href="#" data-category="chair">
+                Стулья
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" aria-current="page" href="#" data-category="lamp">
+                Лампы
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" aria-current="page" href="#" data-category="kitchen">
+                Для кухни
+            </a>
+        </li>
+    </ul>
+
+    <div class="products d-flex align-content-around justify-content-center flex-wrap">
+        {% for product in products %}
+        <div class="card p-3 col-12 col-lg-3 m-1">
+            <div class="wrapper h-100">
+                <div class="d-flex justify-content-between align-items-center ">
+                    <div class="mt-2">
+                        <h4 class="product-name text-uppercase">
+                            <a href="{% url 'django_product_detail' product.pk %}" class="link-info">
+                                {{ product.title }}
+                            </a>
+                        </h4>
+                        <div class="mt-5">
+                            <div class="d-flex flex-row user-ratings">
+                                <div class="ratings">
+                                    {% for x in ""|ljust:5 %}
+                                    {% if forloop.counter <= product.rating %} <i class="fa fa-star"></i>
+                                        {% else %}
+                                        <i class="fa fa-star-o"></i>
+                                        {% endif %}
+                                        {% endfor %}
+                                </div>
+                                <h6 class="product-rating text-muted ms-1">{{ product.rating }}/5</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img class="product-image" src="{{ product.img.url }}" width="110">
+                    </div>
+                </div>
+                <p class="product-description">{{ product.description | linebreaks | truncatewords:10 }}</p>
+            </div>
+            <p class="product-price">{{ product.price }}</p>
+            <form action="{% url 'django_add_to_basket' product.pk %}" method="get">
+                <button type="submit" class="btn btn-danger w-100">Купить</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock content %}
+

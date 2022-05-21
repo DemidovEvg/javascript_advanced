@@ -1,0 +1,53 @@
+Content-Type: multipart/alternative;
+ boundary="===============6046219128177585699=="
+MIME-Version: 1.0
+Subject: =?utf-8?b?0JDQutGC0LjQstCw0YbQuNGPINC/0YDQvtGE0LjQu9GP?=
+From: test@example.com
+To: demidov2.evg.v@gmail.com
+Date: Fri, 20 May 2022 12:20:23 -0000
+Message-ID: <165304922351.20592.14568950216034719789@DESKTOP-6R641A0>
+
+--===============6046219128177585699==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+
+
+
+Для активации вашего профиля, перейдите по этой ссылке:
+
+http://127.0.0.1:8000/accounts/activate/bcXopfRTH3vxwmNYd3VM/
+
+--===============6046219128177585699==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Активация профиля</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+<p>
+    Для активации вашего профиля, перейдите по этой ссылке:
+</p>
+
+<p>
+    <a href="http://127.0.0.1:8000/accounts/activate/bcXopfRTH3vxwmNYd3VM/">http://127.0.0.1:8000/accounts/activate/bcXopfRTH3vxwmNYd3VM/</a>
+</p>
+
+</body>
+
+</html>
+
+--===============6046219128177585699==--
+
+-------------------------------------------------------------------------------

@@ -1,9 +1,8 @@
 export function spinnerShow(containerSelector) {
-    let spinner = `
-            <div class="spinner-border" role="status">
-            <span class="sr-only">Loading...</span>
+    let spinner = `<div class="spinner-border mt-3" role="status">
             </div>`;
 
     let container = document.querySelector(containerSelector);
+    container.innerHTML = '';
     container.insertAdjacentHTML('beforeend', spinner)
 }
