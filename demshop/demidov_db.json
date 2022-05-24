@@ -1,0 +1,996 @@
+[
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2022-05-20T10:03:50.119",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "1",
+            "object_repr": "Лампы",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2022-05-20T10:04:02.518",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "2",
+            "object_repr": "Мебель",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2022-05-20T10:04:15.942",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "3",
+            "object_repr": "кухонная утварь",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2022-05-20T10:05:32.397",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "1",
+            "object_repr": "l-1000",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2022-05-20T10:06:18.344",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "2",
+            "object_repr": "h-2000",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 6,
+        "fields": {
+            "action_time": "2022-05-20T10:06:49.038",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "3",
+            "object_repr": "p-3000",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 7,
+        "fields": {
+            "action_time": "2022-05-20T10:07:18.366",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "4",
+            "object_repr": "h-2001",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 8,
+        "fields": {
+            "action_time": "2022-05-20T10:08:06.121",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "5",
+            "object_repr": "l-1001",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 9,
+        "fields": {
+            "action_time": "2022-05-20T10:08:50.258",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "6",
+            "object_repr": "h-2002",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 10,
+        "fields": {
+            "action_time": "2022-05-20T10:09:11.221",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "7",
+            "object_repr": "l-1002",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 11,
+        "fields": {
+            "action_time": "2022-05-20T10:09:31.629",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "8",
+            "object_repr": "l-1003",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 12,
+        "fields": {
+            "action_time": "2022-05-20T10:10:01.090",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "9",
+            "object_repr": "p-3001",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 13,
+        "fields": {
+            "action_time": "2022-05-20T10:20:11.417",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "1",
+            "object_repr": "Review object (1)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 14,
+        "fields": {
+            "action_time": "2022-05-20T19:46:09.696",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "1",
+            "object_repr": "l-1000",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 15,
+        "fields": {
+            "action_time": "2022-05-20T20:43:49.492",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "2",
+            "object_repr": "demidov - h-2001 - 1",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 16,
+        "fields": {
+            "action_time": "2022-05-21T08:17:12.456",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "2",
+            "object_repr": "h-2000",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 17,
+        "fields": {
+            "action_time": "2022-05-21T08:17:16.842",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "4",
+            "object_repr": "h-2001",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 18,
+        "fields": {
+            "action_time": "2022-05-21T08:17:21.327",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "6",
+            "object_repr": "h-2002",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 19,
+        "fields": {
+            "action_time": "2022-05-21T08:17:27.188",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "1",
+            "object_repr": "l-1000",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 20,
+        "fields": {
+            "action_time": "2022-05-21T08:17:31.896",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "5",
+            "object_repr": "l-1001",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 21,
+        "fields": {
+            "action_time": "2022-05-21T08:17:36.707",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "7",
+            "object_repr": "l-1002",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 22,
+        "fields": {
+            "action_time": "2022-05-21T08:17:40.956",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "8",
+            "object_repr": "l-1003",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 23,
+        "fields": {
+            "action_time": "2022-05-21T08:17:46.450",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "8",
+            "object_repr": "l-1003",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 24,
+        "fields": {
+            "action_time": "2022-05-21T08:17:51.214",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "3",
+            "object_repr": "p-3000",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 25,
+        "fields": {
+            "action_time": "2022-05-21T08:17:55.202",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "9",
+            "object_repr": "p-3001",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 26,
+        "fields": {
+            "action_time": "2022-05-21T09:51:49.462",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "1",
+            "object_repr": "Review object (1)",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 27,
+        "fields": {
+            "action_time": "2022-05-21T09:52:52.453",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "2",
+            "object_repr": "Review object (2)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 28,
+        "fields": {
+            "action_time": "2022-05-21T09:53:02.089",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "3",
+            "object_repr": "Review object (3)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 29,
+        "fields": {
+            "action_time": "2022-05-21T09:53:09.656",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "4",
+            "object_repr": "Review object (4)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 30,
+        "fields": {
+            "action_time": "2022-05-21T10:02:05.050",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "4",
+            "object_repr": "Review object (4)",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 31,
+        "fields": {
+            "action_time": "2022-05-21T10:02:12.257",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "1",
+            "object_repr": "Review object (1)",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 32,
+        "fields": {
+            "action_time": "2022-05-21T10:02:14.970",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "2",
+            "object_repr": "Review object (2)",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 33,
+        "fields": {
+            "action_time": "2022-05-21T14:46:01.635",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "4",
+            "object_repr": "Review object (4)",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 34,
+        "fields": {
+            "action_time": "2022-05-21T14:46:07.405",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "1",
+            "object_repr": "Review object (1)",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 35,
+        "fields": {
+            "action_time": "2022-05-24T16:41:15.778",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "5",
+            "object_repr": "admin",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 36,
+        "fields": {
+            "action_time": "2022-05-24T16:41:35.096",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "5",
+            "object_repr": "admin",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"Superuser status\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 37,
+        "fields": {
+            "action_time": "2022-05-24T16:42:17.733",
+            "user": 5,
+            "content_type": 7,
+            "object_id": "2",
+            "object_repr": "h-2000",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u043e\\u0435 \\u043e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 38,
+        "fields": {
+            "action_time": "2022-05-24T16:42:25.265",
+            "user": 5,
+            "content_type": 7,
+            "object_id": "4",
+            "object_repr": "h-2001",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u043e\\u0435 \\u043e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 39,
+        "fields": {
+            "action_time": "2022-05-24T16:42:32.591",
+            "user": 5,
+            "content_type": 7,
+            "object_id": "6",
+            "object_repr": "h-2002",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u043e\\u0435 \\u043e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 40,
+        "fields": {
+            "action_time": "2022-05-24T16:42:39.058",
+            "user": 5,
+            "content_type": 7,
+            "object_id": "1",
+            "object_repr": "l-1000",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u043e\\u0435 \\u043e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 41,
+        "fields": {
+            "action_time": "2022-05-24T16:42:45.691",
+            "user": 5,
+            "content_type": 7,
+            "object_id": "5",
+            "object_repr": "l-1001",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u043e\\u0435 \\u043e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 42,
+        "fields": {
+            "action_time": "2022-05-24T16:42:54.292",
+            "user": 5,
+            "content_type": 7,
+            "object_id": "7",
+            "object_repr": "l-1002",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u043e\\u0435 \\u043e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 43,
+        "fields": {
+            "action_time": "2022-05-24T16:42:58.598",
+            "user": 5,
+            "content_type": 7,
+            "object_id": "8",
+            "object_repr": "l-1003",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u043e\\u0435 \\u043e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 44,
+        "fields": {
+            "action_time": "2022-05-24T16:43:05.300",
+            "user": 5,
+            "content_type": 7,
+            "object_id": "3",
+            "object_repr": "p-3000",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u043e\\u0435 \\u043e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 45,
+        "fields": {
+            "action_time": "2022-05-24T16:43:11.431",
+            "user": 5,
+            "content_type": 7,
+            "object_id": "9",
+            "object_repr": "p-3001",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u043e\\u0435 \\u043e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\"]}}]"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$320000$y2KZuPWizkBStEWTwMgQkr$jB6AfCOkG5hGJ9q1irlInyxYyP3TEvj2UmLA3ANpLos=",
+            "last_login": "2022-05-24T16:39:35.232",
+            "is_superuser": true,
+            "username": "demidov",
+            "first_name": "",
+            "last_name": "",
+            "email": "123@123.ru",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2022-05-20T09:59:37.591",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$320000$AV8UX6szfETfINsSclTxvm$oJEAcjma+18gawlJpGqrbwxsxiRqAxDhDFO3lw1YT/M=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "Пупкин",
+            "first_name": "Иван",
+            "last_name": "",
+            "email": "demidov.evg.v@gmail.com",
+            "is_staff": false,
+            "is_active": false,
+            "date_joined": "2022-05-20T12:15:17.506",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$320000$B4MEW2imcvEp1NNc4mato6$NC0g7p45Ik0F78kRFB+J+LivZN6ylJfysG8lPIwBiLA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "Иванов",
+            "first_name": "Иван",
+            "last_name": "Demidov",
+            "email": "demidov2.evg.v@gmail.com",
+            "is_staff": false,
+            "is_active": false,
+            "date_joined": "2022-05-20T12:20:23.139",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$320000$36mbHoN2rguFpWMmXIQWEO$aY1B4vl5A8CxkirdQ+rLJ2WoyBgCN5G9lS3n2oKuII8=",
+            "last_login": "2022-05-21T14:49:12.422",
+            "is_superuser": false,
+            "username": "Иванов2",
+            "first_name": "Иван",
+            "last_name": "Иванович",
+            "email": "demidov3.evg.v@gmail.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2022-05-20T12:23:14.616",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "password": "pbkdf2_sha256$320000$ajQWEIMJxQniN28uE9JC52$jfq/j1BKYCD2GJrYhsjzQhiLOvvdGUL1aDsI/vVDBMA=",
+            "last_login": "2022-05-24T16:41:44.181",
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2022-05-24T16:41:15",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "3m3sxtqjpgekbco1qjnzxhnv39uta8es",
+        "fields": {
+            "session_data": "eyJfc2Vzc2lvbl9leHBpcnkiOjB9:1ns1fd:QcVN_IACeE6ojK9W0LzBFZHV_mDUG9_FjQMkDPl477M",
+            "expire_date": "2022-06-03T12:23:53.680"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "h6449isaehjlahh2kto9ey6t94ea8zaj",
+        "fields": {
+            "session_data": ".eJxVjMEOwiAQBf-FsyHAAhWP3v0GsrAgVQNJaU_Gf7ckPejxvZnMm3nc1uK3nhY_E7swyU6_X8D4THUAemC9Nx5bXZc58KHwg3Z-a5Re18P9CxTsZWRJGHIxW6eMsTpkp2IW4DJKCTDRWVK0O8zGoJD71ASTySAUSJWUZp8vzuY23Q:1nrzQ8:AvtlFYSYp9a9UBndKnG5-PM7i3vDA25bJxQLzzkpSr0",
+            "expire_date": "2022-06-03T09:59:44.794"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "yrvp1x1796achxy3fowlf5ggowj5n11r",
+        "fields": {
+            "session_data": ".eJxVjMsOwiAQRf-FtSFDKI9x6d5vIMMAUjWQlHZl_Hdt0oVu7znnvkSgba1hG3kJcxJnYcTpd4vEj9x2kO7Ubl1yb-syR7kr8qBDXnvKz8vh_h1UGvVbY2Jg8KDJIZPzWjtEmCAraw0DTBNpsugiEZaS2TidFfmiLBiwGsT7A8nqNw0:1ntUnA:1y8s2qzHw_8WWJjvTRRFZSHh58odMi1bBQxl5olF1iE",
+            "expire_date": "2022-06-07T16:41:44.246"
+        }
+    },
+    {
+        "model": "shop.basketrecord",
+        "pk": 2,
+        "fields": {
+            "user": 1,
+            "product": 4,
+            "count": 4
+        }
+    },
+    {
+        "model": "shop.basketrecord",
+        "pk": 3,
+        "fields": {
+            "user": 1,
+            "product": 7,
+            "count": 1
+        }
+    },
+    {
+        "model": "shop.basketrecord",
+        "pk": 7,
+        "fields": {
+            "user": 1,
+            "product": 6,
+            "count": 2
+        }
+    },
+    {
+        "model": "shop.basketrecord",
+        "pk": 11,
+        "fields": {
+            "user": 4,
+            "product": 5,
+            "count": 1
+        }
+    },
+    {
+        "model": "shop.productcategory",
+        "pk": 1,
+        "fields": {
+            "name": "Лампы",
+            "slug": "lampy"
+        }
+    },
+    {
+        "model": "shop.productcategory",
+        "pk": 2,
+        "fields": {
+            "name": "Мебель",
+            "slug": "mebel"
+        }
+    },
+    {
+        "model": "shop.productcategory",
+        "pk": 3,
+        "fields": {
+            "name": "кухонная утварь",
+            "slug": "kuhonnaya-utvar"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": 1,
+        "fields": {
+            "title": "l-1000",
+            "rating": 4,
+            "short_description": "Овальная лампа для дома",
+            "description": "Овальная лампа для дома\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quis earum asperiores voluptates, dicta deserunt!\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eius!\r\nLorem, ipsum dolor.\r\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ad eligendi voluptas vero repellat autem excepturi deserunt, reprehenderit doloremque labore eaque laboriosam?\r\nLorem ipsum dolor sit, amet consectetur adipisicing elit. Illo illum optio dolorum dolor natus corrupti inventore similique reiciendis nisi non, temporibus maiores numquam aspernatur, laudantium at expedita eos. Deleniti, sequi!",
+            "price": "1500.000",
+            "date_updated": "2022-05-24",
+            "category": 1,
+            "img": "img/2022/05/20/product-1.jpg",
+            "quantity": 10
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": 2,
+        "fields": {
+            "title": "h-2000",
+            "rating": 5,
+            "short_description": "Стул для чтения с овальной лампой",
+            "description": "Стул для чтения с овальной лампой\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quis earum asperiores voluptates, dicta deserunt!\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eius!\r\nLorem, ipsum dolor.\r\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ad eligendi voluptas vero repellat autem excepturi deserunt, reprehenderit doloremque labore eaque laboriosam?\r\nLorem ipsum dolor sit, amet consectetur adipisicing elit. Illo illum optio dolorum dolor natus corrupti inventore similique reiciendis nisi non, temporibus maiores numquam aspernatur, laudantium at expedita eos. Deleniti, sequi!",
+            "price": "2500.000",
+            "date_updated": "2022-05-24",
+            "category": 2,
+            "img": "img/2022/05/20/product-2.jpg",
+            "quantity": 15
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": 3,
+        "fields": {
+            "title": "p-3000",
+            "rating": 3,
+            "short_description": "Инновационный чайник с wifi",
+            "description": "Инновационный чайник с wifi\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quis earum asperiores voluptates, dicta deserunt!\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eius!\r\nLorem, ipsum dolor.\r\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ad eligendi voluptas vero repellat autem excepturi deserunt, reprehenderit doloremque labore eaque laboriosam?\r\nLorem ipsum dolor sit, amet consectetur adipisicing elit. Illo illum optio dolorum dolor natus corrupti inventore similique reiciendis nisi non, temporibus maiores numquam aspernatur, laudantium at expedita eos. Deleniti, sequi!",
+            "price": "1700.000",
+            "date_updated": "2022-05-24",
+            "category": 3,
+            "img": "img/2022/05/20/product-3.jpg",
+            "quantity": 50
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": 4,
+        "fields": {
+            "title": "h-2001",
+            "rating": 2,
+            "short_description": "Данный стул всегда будет улыбаться вам",
+            "description": "Данный стул всегда будет улыбаться вам\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quis earum asperiores voluptates, dicta deserunt!\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eius!\r\nLorem, ipsum dolor.\r\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ad eligendi voluptas vero repellat autem excepturi deserunt, reprehenderit doloremque labore eaque laboriosam?\r\nLorem ipsum dolor sit, amet consectetur adipisicing elit. Illo illum optio dolorum dolor natus corrupti inventore similique reiciendis nisi non, temporibus maiores numquam aspernatur, laudantium at expedita eos. Deleniti, sequi!",
+            "price": "3800.000",
+            "date_updated": "2022-05-24",
+            "category": 2,
+            "img": "img/2022/05/20/product-4.jpg",
+            "quantity": 4
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": 5,
+        "fields": {
+            "title": "l-1001",
+            "rating": 5,
+            "short_description": "Лампа с датчиком движения",
+            "description": "Лампа с датчиком движения\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quis earum asperiores voluptates, dicta deserunt!\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eius!\r\nLorem, ipsum dolor.\r\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ad eligendi voluptas vero repellat autem excepturi deserunt, reprehenderit doloremque labore eaque laboriosam?\r\nLorem ipsum dolor sit, amet consectetur adipisicing elit. Illo illum optio dolorum dolor natus corrupti inventore similique reiciendis nisi non, temporibus maiores numquam aspernatur, laudantium at expedita eos. Deleniti, sequi!",
+            "price": "1200.000",
+            "date_updated": "2022-05-24",
+            "category": 2,
+            "img": "img/2022/05/20/product-11.jpg",
+            "quantity": 4
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": 6,
+        "fields": {
+            "title": "h-2002",
+            "rating": 3,
+            "short_description": "Стул как у Кристиан Стюарт",
+            "description": "Стул как у Кристиан Стюарт\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quis earum asperiores voluptates, dicta deserunt!\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eius!\r\nLorem, ipsum dolor.\r\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ad eligendi voluptas vero repellat autem excepturi deserunt, reprehenderit doloremque labore eaque laboriosam?\r\nLorem ipsum dolor sit, amet consectetur adipisicing elit. Illo illum optio dolorum dolor natus corrupti inventore similique reiciendis nisi non, temporibus maiores numquam aspernatur, laudantium at expedita eos. Deleniti, sequi!",
+            "price": "5500.000",
+            "date_updated": "2022-05-24",
+            "category": 2,
+            "img": "img/2022/05/20/product-21.jpg",
+            "quantity": 2
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": 7,
+        "fields": {
+            "title": "l-1002",
+            "rating": 4,
+            "short_description": "Настольная лампа, с со встроенным ионизатором воздуха",
+            "description": "Настольная лампа, с со встроенным ионизатором воздуха\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quis earum asperiores voluptates, dicta deserunt!\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eius!\r\nLorem, ipsum dolor.\r\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ad eligendi voluptas vero repellat autem excepturi deserunt, reprehenderit doloremque labore eaque laboriosam?\r\nLorem ipsum dolor sit, amet consectetur adipisicing elit. Illo illum optio dolorum dolor natus corrupti inventore similique reiciendis nisi non, temporibus maiores numquam aspernatur, laudantium at expedita eos. Deleniti, sequi!",
+            "price": "2200.000",
+            "date_updated": "2022-05-24",
+            "category": 1,
+            "img": "img/2022/05/20/product-31.jpg",
+            "quantity": 4
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": 8,
+        "fields": {
+            "title": "l-1003",
+            "rating": 5,
+            "short_description": "Беспроводная настенная лампа",
+            "description": "Беспроводная настенная лампа\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quis earum asperiores voluptates, dicta deserunt!\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eius!\r\nLorem, ipsum dolor.\r\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ad eligendi voluptas vero repellat autem excepturi deserunt, reprehenderit doloremque labore eaque laboriosam?\r\nLorem ipsum dolor sit, amet consectetur adipisicing elit. Illo illum optio dolorum dolor natus corrupti inventore similique reiciendis nisi non, temporibus maiores numquam aspernatur, laudantium at expedita eos. Deleniti, sequi!",
+            "price": "3500.000",
+            "date_updated": "2022-05-24",
+            "category": 1,
+            "img": "img/2022/05/20/product-41.jpg",
+            "quantity": 1
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": 9,
+        "fields": {
+            "title": "p-3001",
+            "rating": 2,
+            "short_description": "Ступка для алхимика",
+            "description": "Ступка для алхимика\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quis earum asperiores voluptates, dicta deserunt!\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eius!\r\nLorem, ipsum dolor.\r\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ad eligendi voluptas vero repellat autem excepturi deserunt, reprehenderit doloremque labore eaque laboriosam?\r\nLorem ipsum dolor sit, amet consectetur adipisicing elit. Illo illum optio dolorum dolor natus corrupti inventore similique reiciendis nisi non, temporibus maiores numquam aspernatur, laudantium at expedita eos. Deleniti, sequi!",
+            "price": "500.000",
+            "date_updated": "2022-05-24",
+            "category": 2,
+            "img": "img/2022/05/20/product-51.jpg",
+            "quantity": 33
+        }
+    },
+    {
+        "model": "shop.review",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "product": 2,
+            "review": "Супер стул, даже вставать не хочется.",
+            "date_update": "2022-05-21T14:46:07.402"
+        }
+    },
+    {
+        "model": "shop.review",
+        "pk": 2,
+        "fields": {
+            "user": 1,
+            "product": 1,
+            "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, sed! Dolores suscipit quidem deserunt corporis, nihil provident esse exercitationem voluptatibus quo? Id libero nobis illo molestias, repellat esse molestiae quod commodi modi iusto distinctio dolor voluptatum exercitationem repudiandae itaque, expedita neque. Nulla minus minima omnis ut adipisci laudantium maiores error.",
+            "date_update": "2022-05-21T10:02:14.968"
+        }
+    },
+    {
+        "model": "shop.review",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "product": 1,
+            "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, sed! Dolores suscipit quidem deserunt corporis, nihil provident esse exercitationem voluptatibus quo? Id libero nobis illo molestias, repellat esse molestiae quod commodi modi iusto distinctio dolor voluptatum exercitationem repudiandae itaque, expedita neque. Nulla minus minima omnis ut adipisci laudantium maiores error.",
+            "date_update": "2022-05-21T00:00:00"
+        }
+    },
+    {
+        "model": "shop.review",
+        "pk": 4,
+        "fields": {
+            "user": 2,
+            "product": 2,
+            "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, sed! Dolores suscipit quidem deserunt corporis, nihil provident esse exercitationem voluptatibus quo? Id libero nobis illo molestias, repellat esse molestiae quod commodi modi iusto distinctio dolor voluptatum exercitationem repudiandae itaque, expedita neque. Nulla minus minima omnis ut adipisci laudantium maiores error.",
+            "date_update": "2022-05-21T14:46:01.633"
+        }
+    },
+    {
+        "model": "shop.review",
+        "pk": 5,
+        "fields": {
+            "user": 1,
+            "product": 2,
+            "review": "fghjfghjg",
+            "date_update": "2022-05-21T14:40:31.046"
+        }
+    },
+    {
+        "model": "shop.review",
+        "pk": 6,
+        "fields": {
+            "user": 1,
+            "product": 2,
+            "review": "iopiojp",
+            "date_update": "2022-05-21T14:41:40.579"
+        }
+    },
+    {
+        "model": "shop.review",
+        "pk": 7,
+        "fields": {
+            "user": 1,
+            "product": 2,
+            "review": "А я просто балуюсь",
+            "date_update": "2022-05-21T14:48:31.701"
+        }
+    },
+    {
+        "model": "shop.review",
+        "pk": 8,
+        "fields": {
+            "user": 4,
+            "product": 2,
+            "review": "Кто здесь?",
+            "date_update": "2022-05-21T14:49:23.959"
+        }
+    },
+    {
+        "model": "accounts.activation",
+        "pk": 1,
+        "fields": {
+            "user": 2,
+            "created_at": "2022-05-20T12:15:17.785",
+            "code": "CWjKp2KR9IsjUsKjUUIq",
+            "email": ""
+        }
+    },
+    {
+        "model": "accounts.activation",
+        "pk": 2,
+        "fields": {
+            "user": 3,
+            "created_at": "2022-05-20T12:20:23.421",
+            "code": "bcXopfRTH3vxwmNYd3VM",
+            "email": ""
+        }
+    }
+]

@@ -28,6 +28,10 @@ urlpatterns = [
          DjangoProductsView.as_view(),
          name='django_products'),
 
+    path('django_products/category/<slug:category_slug>',
+         DjangoProductsView.as_view(),
+         name='django_products_by_category'),
+
     path('django_product/<int:pk>',
          DjangoProductDetailView.as_view(),
          name='django_product_detail'),
