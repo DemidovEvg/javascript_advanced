@@ -19,6 +19,11 @@ class Product(models.Model):
         choices=RATING_CHOICES
     )
 
+    short_description = models.CharField(
+        verbose_name='Короткое описание',
+        max_length=128
+    )
+
     description = models.TextField(
         verbose_name='Описание',
         null=True,
@@ -45,6 +50,11 @@ class Product(models.Model):
     img = models.ImageField(
         verbose_name="Изображение товара",
         upload_to="img/%Y/%m/%d/",
+    )
+
+    quantity = models.PositiveIntegerField(
+        verbose_name='Количество',
+        
     )
 
     def get_absolute_url(self):

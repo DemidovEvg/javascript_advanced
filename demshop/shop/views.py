@@ -8,7 +8,7 @@ from django.views.generic import (TemplateView,
                                   )
 from .models import *
 from .forms import *
-from django.db.models import F
+from django.db.models import F, Q
 
 
 class MainView(TemplateView):
@@ -52,7 +52,15 @@ class DjangoProductsView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['categories'] = ProductCategory.objects.all()
         return context
+
+    def get_queryset(self):
+        query = Q()
+        if 'category_slug' in self.kwargs:
+            category_slug = self.kwargs['category_slug']
+            query = Q(category__slug=category_slug)
+        return Product.objects.filter(query)
 
 
 class DjangoBasketView(ListView):
