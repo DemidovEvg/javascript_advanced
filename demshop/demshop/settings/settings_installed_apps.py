@@ -9,5 +9,4 @@ INSTALLED_APPS = [
     'baseapp.apps.BaseappConfig',
     'bootstrap5',
     'accounts.apps.AccountsConfig',
-    'shell_plus'
 ]

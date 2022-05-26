@@ -4,35 +4,14 @@
 {% block content %}
 {% include 'shop/includes/menu.html' %}
 
+
+
+<script type="module" src="{% static 'shop/js/vue_project/bundle/entry_main_bundle.js' %}"></script>
+
 <div class="container my-1">
-    <ul class="nav nav-tabs menu-products">
-        <li class="nav-item">
-            <a class="nav-link text-dark active" aria-current="page" href="#" data-category="all">
-                Все
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" aria-current="page" href="#" data-category="chair">
-                Стулья
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" aria-current="page" href="#" data-category="lamp">
-                Лампы
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" aria-current="page" href="#" data-category="kitchen">
-                Для кухни
-            </a>
-        </li>
-    </ul>
-
-    <div class="products d-flex align-content-around justify-content-center flex-wrap">
-
+    <div id="app">
     </div>
 
-    <div class="clr"></div>
 </div>
-<script type="module" src="{% static 'shop/js/products/main_products.js' %}"></script>
+<!-- <script type="module" src="{% static 'shop/js/products/main_products.js' %}"></script> -->
 {% endblock content %}
