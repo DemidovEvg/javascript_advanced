@@ -1,0 +1,17 @@
+{% extends 'baseapp/base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'shop/includes/menu.html' %}
+
+
+
+<script type="module" src="{% static 'shop/js/vue_project/bundle/entry_main_bundle.js' %}"></script>
+
+<div class="container my-1">
+    <div id="app">
+    </div>
+
+</div>
+<!-- <script type="module" src="{% static 'shop/js/products/main_products.js' %}"></script> -->
+{% endblock content %}

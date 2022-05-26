@@ -1,0 +1,186 @@
+{% extends 'baseapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="container">
+   <div class="hero-white">
+      <div class="header clearfix">
+         {% include 'shop/includes/menu.html' %}
+      </div>
+   </div>
+
+   <section class="h-100 h-custom" style="background-color: #eee;">
+      <div class="container py-5 h-100">
+         <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+               <div class="card">
+                  <div class="card-body p-4">
+
+                     <div class="row">
+
+                        <div class="col-lg-7">
+                           <div class="d-flex justify-content-between align-items-center mb-4">
+                              <div>
+                                 <p class="mb-1">Товары в корзине</p>
+                              </div>
+                              <div>
+                                 <p class="mb-0"><span class="text-muted">Сортировать по:</span>
+                                    <a href="?sort={{sort_price}}" class="text-body">цене</a>
+                                    <a href="?sort={{sort_title}}" class="text-body">наименованию</a>
+                                 </p>
+                              </div>
+                           </div>
+
+                           <div class="basket-container">
+                              {% for record in records %}
+                              <div class="card mb-3">
+                                 <div class="card-body">
+                                    <div class="d-flex">
+                                       <div class="d-flex flex-row align-items-center col-8">
+                                          <div class="col-4">
+                                             <img src="{{ record.product.img.url }}" class="img-fluid rounded-3"
+                                                alt="Shopping item">
+                                          </div>
+                                          <div class="ms-2 col-8">
+                                             <h5>
+                                                <a href="{% url 'django_product_detail' record.product.pk %}"
+                                                   class="link-info">
+                                                   {{ record.product.title }}
+                                                </a>
+                                             </h5>
+                                             <p class="mb-0">
+                                                {{ record.product.description | linebreaks | truncatewords:10 }}
+                                             </p>
+                                          </div>
+                                       </div>
+                                       <div class="d-flex flex-row align-items-center col-4">
+                                          <div class="col-4">
+                                             <input type="number" class="counter form-control"
+                                                value="{{ record.count }}">
+                                          </div>
+                                          <div class="col-6">
+                                             <h5 class="ms-2 mb-0 product-price"
+                                                data-product-price="{{record.product.price}}">
+                                                {{ record.product.price|floatformat:"0" }} р
+                                             </h5>
+                                          </div>
+                                          <form class="col-2" method="post"
+                                             action="{% url 'django_remove_basket_record' record.pk %}">
+                                             {% csrf_token %}
+                                             <button type="submit" class="btn btn-outline-danger px-1 py-0"
+                                                title="Удалить">Х</button>
+                                          </form>
+
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              {% endfor %}
+                           </div>
+
+                        </div>
+                        <div class="col-lg-5">
+
+                           <div class="card bg-primary text-white rounded-3">
+                              <div class="card-body">
+                                 <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h5 class="mb-0">Card details</h5>
+                                 </div>
+
+                                 <form class="mt-4">
+                                    <div class="form-outline form-white mb-4">
+                                       <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+                                          placeholder="Cardholder's Name" />
+                                       <label class="form-label" for="typeName">Cardholder's Name</label>
+                                    </div>
+
+                                    <div class="form-outline form-white mb-4">
+                                       <input type="text" id="typeText1" class="form-control form-control-lg" siez="17"
+                                          placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
+                                       <label class="form-label" for="typeText">Card Number</label>
+                                    </div>
+
+                                    <div class="row mb-4">
+                                       <div class="col-md-6">
+                                          <div class="form-outline form-white">
+                                             <input type="text" id="typeExp" class="form-control form-control-lg"
+                                                placeholder="MM/YYYY" size="7" id="exp" minlength="7" maxlength="7" />
+                                             <label class="form-label" for="typeExp">Expiration</label>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-6">
+                                          <div class="form-outline form-white">
+                                             <input type="password" id="typeText" class="form-control form-control-lg"
+                                                placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3"
+                                                maxlength="3" />
+                                             <label class="form-label" for="typeText">Cvv</label>
+                                          </div>
+                                       </div>
+                                    </div>
+
+                                 </form>
+
+                                 <hr class="my-4">
+
+                                 <div class="d-flex justify-content-between mb-4">
+                                    <p class="mb-2">Стоимость</p>
+                                    <p class="mb-2" id="basket-value">{{ basket_value|floatformat:"0" }} р
+                                    </p>
+                                 </div>
+
+                                 <button type="button" class="btn btn-info btn-block btn-lg">
+                                    <div class="d-flex justify-content-between">
+                                       <span>Купить <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
+                                    </div>
+                                 </button>
+
+                              </div>
+                           </div>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <div class="products"></div>
+   <div class="clr"></div>
+</div>
+
+<script>
+   const basketContainerTag = document.querySelector('.basket-container');
+   basketContainerTag.addEventListener('input', (event) => changeBasketValue(event));
+
+   function changeBasketValue(event) {
+      let counter = event.target.closest('.counter');
+      if (!counter) return
+
+      let productCounterTags = document.querySelectorAll('.counter');
+      let productCounters = Array.from(productCounterTags).map(tag => +tag.value);
+      // console.log(productCounters);
+
+      let productPriceTags = document.querySelectorAll('.product-price');
+      let productPrices = Array.from(productPriceTags).map(tag => +tag.dataset.productPrice.replace(',', '.'));
+      // console.log(productPrices);
+
+      let basketValue = 0;
+
+      for (let num in productCounters) {
+         basketValue += productCounters[num] * productPrices[num];
+      }
+
+      const basketValueTag = document.querySelector('#basket-value');
+      basketValueTag.textContent = `${basketValue} р`;
+   }
+
+
+
+</script>
+{% endblock content %}
