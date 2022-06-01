@@ -38,8 +38,10 @@
                     </li>
                     <li class="nav-item">
                         <a href="{% url 'django_basket' %}"
-                            class="nav-link {% if request.resolver_match.url_name == 'django_basket' %}active{% endif %}">
-                            Корзина</br> (для курса Django)
+                            class="nav-link position-relative {% if request.resolver_match.url_name == 'django_basket' %}active{% endif %}">
+                            Корзина
+                            {% include 'shop/includes/basket_count_badge.html' %}
+                            </br> (для курса Django)
                         </a>
                     </li>
                     {% if request.user.is_authenticated %}

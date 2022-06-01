@@ -7,25 +7,19 @@
 <div class="container my-1">
     <ul class="nav nav-tabs menu-products">
         <li class="nav-item">
-            <a class="nav-link text-dark active" aria-current="page" href="#" data-category="all">
+            <a class="nav-link text-dark {% if request.resolver_match.url_name == 'django_products' %} active {% endif %}"
+                aria-current="page" href="{% url 'django_products' %}" data-category="all">
                 Все
             </a>
         </li>
+        {% for category in categories %}
         <li class="nav-item">
-            <a class="nav-link text-dark" aria-current="page" href="#" data-category="chair">
-                Стулья
+            <a class="nav-link text-dark {% if request.resolver_match.kwargs.category_slug == category.slug %} active {% endif %}"
+                aria-current="page" href="{% url 'django_products_category' category.slug %}" data-category="chair">
+                {{ category.name | title }}
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" aria-current="page" href="#" data-category="lamp">
-                Лампы
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" aria-current="page" href="#" data-category="kitchen">
-                Для кухни
-            </a>
-        </li>
+        {% endfor %}
     </ul>
 
     <div class="products d-flex align-content-around justify-content-center flex-wrap">
@@ -62,6 +56,7 @@
             <p class="product-price">{{ product.price }}</p>
             <form action="{% url 'django_add_to_basket' product.pk %}" method="get">
                 <button type="submit" class="btn btn-danger w-100">Купить</button>
+                <input type="number" hidden value="1" name="count_add_one">
             </form>
         </div>
         {% endfor %}
@@ -69,4 +64,3 @@
 
 </div>
 {% endblock content %}
-
