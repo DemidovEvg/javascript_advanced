@@ -31,10 +31,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{% url 'js_basket' %}"
-                            class="nav-link {% if request.resolver_match.url_name == 'js_basket' %}active{% endif %}">
-                            Корзина</br> (для курса JS)
-                        </a>
+                        <cart ref="cart" :point-with-api="pointWithApi"></cart>
                     </li>
                     <li class="nav-item">
                         <a href="{% url 'django_basket' %}"
