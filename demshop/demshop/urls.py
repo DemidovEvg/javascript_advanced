@@ -7,8 +7,8 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('shop.urls'), name='home'),
+    path('admin/', include('adminapp.urls')),
+    path('', include('shop.urls')),
 
     path('i18n/', include('django.conf.urls.i18n')),
 

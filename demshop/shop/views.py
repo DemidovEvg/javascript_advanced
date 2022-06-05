@@ -123,7 +123,8 @@ if 'Django block':
 
             if BasketRecord.objects.filter(product_id=product_pk, user=self.request.user).exists():
                 current_record = BasketRecord.objects.get(
-                    product_id=product_pk)
+                    product_id=product_pk,
+                    user=self.request.user)
                 current_record.count = new_count or current_record.count + 1
                 current_record.save()
             else:

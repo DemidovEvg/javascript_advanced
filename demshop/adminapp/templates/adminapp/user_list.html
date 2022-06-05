@@ -1,0 +1,70 @@
+{% extends "adminapp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="users_list m-auto">
+    <a class="btn btn-secondary" href={% url 'adminapp:user_create' %}>
+        Создать нового пользователя
+    </a>
+    {% for object in users %}
+    <div class="row mt-3 {% if not object.is_active %}not_active{% endif %}">
+        <div class="col-2">
+            <img class="img-fluid rounded" src="https://avatars.dicebear.com/api/adventurer/:{{ object.username }}.svg"
+                alt="{{ object.username }}">
+        </div>
+        <div class="col-2">
+            <div class="row">
+                Роль:
+                {% if object.is_superuser %}
+                Администратор
+                {% else %}
+                Пользователь
+                {% endif %}
+            </div>
+            <div class="row">
+                <a class="btn btn-secondary my-2 p-1" href={% url 'adminapp:user_update' object.pk %}>
+                    редактировать
+                </a>
+            </div>
+
+            <div class="row">
+                <a class="btn btn-secondary my-2 p-1" href={% url 'adminapp:user_delete' object.pk %}>
+                    удалить
+                </a>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="row ms-1"><strong class="p-0">Логин: {{ object.username }}</strong></div>
+
+            {% if object.get_full_name %}
+            <div class="row ms-1">
+                Пользователь: {{ object.get_full_name|title }}
+            </div>
+            {% endif %}
+        </div>
+        <div class="col">
+            <div class="row">
+                email:
+                {{ object.email }}
+            </div>
+            <div class="row">
+                logged:
+                {{ object.last_login }}
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .not_active {
+            opacity: 0.33;
+        }
+    </style>
+    {% endfor%}
+</div>
+
+
+
+{% endblock content %}

@@ -2,7 +2,7 @@
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a href="{% url 'main' %}">
+            <a href="{% url 'shop:main' %}">
                 <img src="{% static 'shop/img/logo.png' %}" alt="" width="185" height="22">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -13,19 +13,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="{% url 'js_products' %}"
+                        <a href="{% url 'shop:js_products' %}"
                             class="nav-link {% if request.resolver_match.url_name == 'js_products' %}active{% endif %}">
                             Продукты</br> (для курса JS)
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{% url 'django_products' %}"
+                        <a href="{% url 'shop:django_products' %}"
                             class="nav-link {% if request.resolver_match.url_name == 'django_products' %}active{% endif %}">
                             Продукты</br> (для курса Django)
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{% url 'contact' %}"
+                        <a href="{% url 'shop:contact' %}"
                             class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
                             Контакты
                         </a>
@@ -34,10 +34,11 @@
                         <cart ref="cart" :point-with-api="pointWithApi"></cart>
                     </li>
                     <li class="nav-item">
-                        <a href="{% url 'django_basket' %}"
-                            class="nav-link position-relative {% if request.resolver_match.url_name == 'django_basket' %}active{% endif %}">
-                            Корзина
-                            {% include 'shop/includes/basket_count_badge.html' %}
+                        <a href="{% url 'shop:django_basket' %}"
+                            class="nav-link {% if request.resolver_match.url_name == 'django_basket' %}active{% endif %}">
+                            <span class="position-relative">Корзина
+                                {% include 'shop/includes/basket_count_badge.html'%}
+                            </span>
                             </br> (для курса Django)
                         </a>
                     </li>
@@ -49,6 +50,13 @@
                             {{ request.user.username }}
                         </a>
                     </li>
+                    {% if request.user.is_superuser %}
+                    <li class="nav-item">
+                        <a href="{% url 'adminapp:user_list' %}" class="nav-link">
+                            Админка
+                        </a>
+                    </li>
+                    {% endif %}
                     <li class="nav-item">
                         <a href="{% url 'accounts:log_out' %}" class="nav-link">
                             Выйти
