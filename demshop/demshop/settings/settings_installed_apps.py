@@ -9,4 +9,6 @@ INSTALLED_APPS = [
     'baseapp.apps.BaseappConfig',
     'bootstrap5',
     'accounts.apps.AccountsConfig',
+    'adminapp.apps.AdminappConfig',
+    'crispy_forms',
 ]

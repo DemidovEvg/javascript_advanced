@@ -1,5 +1,5 @@
 import { ProductItem } from './product_item.js'
-import { Api } from '../api.js';
+import { Api } from '../___api.js';
 
 export class ProductList {
     constructor({ container_selector = '.products' }) {

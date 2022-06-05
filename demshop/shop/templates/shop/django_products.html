@@ -54,10 +54,7 @@
                 <p class="product-description">{{ product.description | linebreaks | truncatewords:10 }}</p>
             </div>
             <p class="product-price">{{ product.price }}</p>
-            <form action="{% url 'django_add_to_basket' product.pk %}" method="get">
-                <button type="submit" class="btn btn-danger w-100">Купить</button>
-                <input type="number" hidden value="1" name="count_add_one">
-            </form>
+            <a href="{% url 'django_product_detail' product.pk %}" class=" btn btn-danger w-100">Просмотр</a>
         </div>
         {% endfor %}
     </div>

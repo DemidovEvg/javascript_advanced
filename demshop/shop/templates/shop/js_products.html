@@ -2,16 +2,38 @@
 {% load static %}
 
 {% block content %}
-{% include 'shop/includes/menu.html' %}
+<div id="app">
+    {% include 'shop/includes/menu.html' %}
 
+    <div class="container my-1">
+        <menu-categories :products="products" @filter-category="filterCategory"></menu-categories>
 
+        <filter-el></filter-el>
 
-<script type="module" src="{% static 'shop/js/vue_project/bundle/entry_main_bundle.js' %}"></script>
-
-<div class="container my-1">
-    <div id="app">
+        <error ref="error"></error>
+        <products ref="products" :point-with-api="pointWithApi" @get-products-event="getProducts"></products>
     </div>
-
 </div>
+
+
+
+<div class="clr"></div>
+
+
+<script src="https://unpkg.com/vue@3"></script>
+
+<script src="{% static 'shop/js/main.js' %}"></script>
+
+
+
+<script src="{% static 'shop/js/ProductComponent.js' %}"></script>
+<script src="{% static 'shop/js/CartComponent.js' %}"></script>
+<script src="{% static 'shop/js/FilterComp.js' %}"></script>
+<script src="{% static 'shop/js/ErrorComp.js' %}"></script>
+<script src="{% static 'shop/js/CategoryComponent.js' %}"></script>
+
+<script>
+    app.mount('#app');
+</script>
 <!-- <script type="module" src="{% static 'shop/js/products/main_products.js' %}"></script> -->
 {% endblock content %}

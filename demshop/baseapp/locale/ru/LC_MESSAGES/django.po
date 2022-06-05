@@ -238,3 +238,6 @@ msgstr "Ваше имя пользователя"
 
 msgid "You are a guest."
 msgstr "Вы гость."
+
+msgid "Admin pannel"
+msgstr "Админка"
