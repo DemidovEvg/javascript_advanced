@@ -1,0 +1,103 @@
+{% extends "adminapp/base.html" %}
+
+{% load static %}
+{% load paginator_tag %}
+
+
+{% block content %}
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link {% if request.resolver_match.url_name == 'all_category_list' %} active {% endif %}"
+            aria-current="page" href="{% url 'adminapp:all_category_list' %}">Все</a>
+    </li>
+    {% for object in categories %}
+    <li class="nav-item">
+        <a class="nav-link {% if request.resolver_match.kwargs.pk|add:'0' == object.pk %} active {% endif %}"
+            aria-current="page" href="{% url 'adminapp:category_list' object.pk %}">
+            {{ object.name }}
+        </a>
+    </li>
+    {% endfor%}
+</ul>
+<div class="row">
+    <div class="col-4">
+        <a class="btn btn-secondary my-2 w-100" aria-current="page" href="{% url 'adminapp:category_create' %}">
+            Создать новую категорию
+        </a>
+    </div>
+</div>
+{% if request.resolver_match.kwargs.pk %}
+<div class="row">
+    <div class="col-4">
+        <a class="btn btn-secondary my-2 w-100" aria-current="page"
+            href="{% url 'adminapp:category_delete' current_category.pk %}">
+            Удалить категорию {{ current_category.name }}
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <a class="btn btn-secondary my-2 w-100" aria-current="page"
+            href="{% url 'adminapp:category_update' current_category.pk %}">
+            Редактировать категорию {{ current_category.name }}
+        </a>
+    </div>
+</div>
+{% endif %}
+
+<div class="row">
+    <div class="col-4">
+        <a class="btn btn-secondary my-2 w-100" aria-current="page" href="{% url 'adminapp:product_create' %}">
+            Создать новый продукт
+        </a>
+    </div>
+</div>
+
+
+{% for product in products %}
+
+<div class="card p-3 col m-1">
+    <div class="wrapper h-100">
+        <div class="d-flex justify-content-between align-items-center ">
+            <div class="mt-2">
+                <h4 class="product-name text-uppercase">
+                    {{ product.title }}
+                </h4>
+                <div class="mt-5">
+                    <div class="d-flex flex-row user-ratings">
+                        <div class="ratings">
+                            {% for x in ""|ljust:5 %}
+                            {% if forloop.counter <= product.rating %} <i class="fa fa-star"></i>
+                                {% else %}
+                                <i class="fa fa-star-o"></i>
+                                {% endif %}
+                                {% endfor %}
+                        </div>
+                        <h6 class="product-rating text-muted ms-1">{{ product.rating }}/5</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <img class="product-image" src="{{ product.img.url }}" width="110">
+            </div>
+        </div>
+        <p class="product-description">{{ product.description | linebreaks | truncatewords:10 }}</p>
+    </div>
+    <p class="product-price">{{ product.price }}</p>
+    <div class="row d-flex">
+        <div class="col">
+            <a href="{% url 'adminapp:product_detail' product.pk %}" class=" btn btn-secondary w-100">Просмотр</a>
+        </div>
+        <div class="col"><a href="{% url 'adminapp:product_update' product.pk %}"
+                class=" btn btn-secondary w-100">Редактировать</a></div>
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+{% pagination_tag %}
+
+{% endblock content %}

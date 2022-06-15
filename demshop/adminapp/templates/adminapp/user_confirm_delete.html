@@ -1,0 +1,12 @@
+{% extends "adminapp/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <p>Точно удаляем пользователя: "{{ object }}"?</p>
+    <a href="" class="btn btn-secondary my-2" onclick="javascript:history.back(); return false;">Назад</a>
+    <input class="btn btn-secondary my-2" type="submit" value="Подтвердить" />
+</form>
+{% endblock content %}

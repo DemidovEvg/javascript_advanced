@@ -1,0 +1,37 @@
+{% extends "adminapp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="card p-3 col m-1">
+    <div class="wrapper h-100">
+        <div class="d-flex justify-content-between align-items-center ">
+            <div class="mt-2">
+                <h4 class="product-name text-uppercase">
+                    {{ product.title }}
+                </h4>
+                <div class="mt-5">
+                    <div class="d-flex flex-row user-ratings">
+                        <div class="ratings">
+                            {% for x in ""|ljust:5 %}
+                            {% if forloop.counter <= product.rating %} <i class="fa fa-star"></i>
+                                {% else %}
+                                <i class="fa fa-star-o"></i>
+                                {% endif %}
+                                {% endfor %}
+                        </div>
+                        <h6 class="product-rating text-muted ms-1">{{ product.rating }}/5</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <img class="product-image" src="{{ product.img.url }}" width="500">
+            </div>
+        </div>
+        <p class="product-description">{{ product.description | linebreaks}}</p>
+    </div>
+    <p class="product-price">{{ product.price }}</p>
+    <a href="{% url 'adminapp:product_update' product.pk %}" class=" btn btn-secondary w-100">Редактировать</a>
+</div>
+{% endblock content %}

@@ -35,7 +35,7 @@
 
                            <div class="basket-container">
                               {% for record in records %}
-                              <div class="card mb-3">
+                              <div class="card mb-3 app" id="app_{{ forloop.counter }}">
                                  <div class="card-body">
                                     <div class="d-flex">
                                        <div class="d-flex flex-row align-items-center col-8">
@@ -55,12 +55,22 @@
                                              </p>
                                           </div>
                                        </div>
-                                       <div class="d-flex flex-row align-items-center col-4">
-                                          <div class="col-4">
-                                             <input type="number" class="counter form-control"
-                                                value="{{ record.count }}">
-                                          </div>
-                                          <div class="col-6">
+                                       <div class="d-flex flex-row align-items-start col-4">
+                                          <div class="col-10">
+                                             <form class="col-10"
+                                                action="{% url 'django_add_to_basket' record.product.pk %}"
+                                                method="get">
+                                                <div class="input-group mb-3 d-flex flex-nowrap">
+                                                   <span class="input-group-text py-1" @click="minusOne"
+                                                      style="cursor:pointer">−</span>
+                                                   <input @input="submitForm" name="new_count" type="number"
+                                                      class="counter form-control py-1" :value="value"
+                                                      :data-init-value="initValue = ('{{ record.count }}')"
+                                                      data-product-pk="{{ record.product_id }}">
+                                                   <span class="input-group-text py-1" @click="plusOne"
+                                                      style="cursor:pointer">+</span>
+                                                </div>
+                                             </form>
                                              <h5 class="ms-2 mb-0 product-price"
                                                 data-product-price="{{record.product.price}}">
                                                 {{ record.product.price|floatformat:"0" }} р
@@ -69,7 +79,7 @@
                                           <form class="col-2" method="post"
                                              action="{% url 'django_remove_basket_record' record.pk %}">
                                              {% csrf_token %}
-                                             <button type="submit" class="btn btn-outline-danger px-1 py-0"
+                                             <button type="submit" class="btn btn-outline-danger px-1 py-1"
                                                 title="Удалить">Х</button>
                                           </form>
 
@@ -154,33 +164,52 @@
    <div class="clr"></div>
 </div>
 
+<script src="https://unpkg.com/vue@3"></script>
+
 <script>
-   const basketContainerTag = document.querySelector('.basket-container');
-   basketContainerTag.addEventListener('input', (event) => changeBasketValue(event));
+   let config = {
+      data() {
+         return {
+            value: 0,
+            initValue: 0
+         }
+      },
+      computed: {
 
-   function changeBasketValue(event) {
-      let counter = event.target.closest('.counter');
-      if (!counter) return
-
-      let productCounterTags = document.querySelectorAll('.counter');
-      let productCounters = Array.from(productCounterTags).map(tag => +tag.value);
-      // console.log(productCounters);
-
-      let productPriceTags = document.querySelectorAll('.product-price');
-      let productPrices = Array.from(productPriceTags).map(tag => +tag.dataset.productPrice.replace(',', '.'));
-      // console.log(productPrices);
-
-      let basketValue = 0;
-
-      for (let num in productCounters) {
-         basketValue += productCounters[num] * productPrices[num];
+      },
+      methods: {
+         minusOne(event) {
+            this.value -= 1;
+            setTimeout(() => this.submitForm(event), 0);
+         },
+         plusOne(event) {
+            this.value += 1;
+            setTimeout(() => this.submitForm(event), 0);
+         },
+         submitForm(event) {
+            const form = event.target.closest('form');
+            form.submit();
+         }
+      },
+      mounted() {
+         this.value = +this.initValue;
       }
-
-      const basketValueTag = document.querySelector('#basket-value');
-      basketValueTag.textContent = `${basketValue} р`;
+   }
+   let app;
+   appContainers = document.querySelectorAll('.app');
+   for (let appContainer of appContainers) {
+      console.log('#' + appContainer.id);
+      app = Vue.createApp(config).mount('#' + appContainer.id);
    }
 
-
-
 </script>
+
+<style>
+   input[type=number]::-webkit-inner-spin-button,
+   input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+   }
+</style>
+
 {% endblock content %}

@@ -2,6 +2,7 @@ from django.urls import path
 from .views import *
 from django.contrib.auth.decorators import login_required
 
+app_name = 'shop'
 
 urlpatterns = [
     path('',
@@ -28,6 +29,10 @@ urlpatterns = [
          DjangoProductsView.as_view(),
          name='django_products'),
 
+    path('django_products/<slug:category_slug>',
+         DjangoProductsCategoryView.as_view(),
+         name='django_products_category'),
+
     path('django_product/<int:pk>',
          DjangoProductDetailView.as_view(),
          name='django_product_detail'),
@@ -40,8 +45,8 @@ urlpatterns = [
          login_required(DjangoRemoveBasketRecordView.as_view()),
          name='django_remove_basket_record'),
 
-    path('django_basket/add/<int:pk>',
-         login_required(add_to_basket),
+    path('django_basket/add/<int:product_pk>/',
+         login_required(DjangoAddToBasket.as_view()),
          name='django_add_to_basket'),
 
     path('django_product/<int:pk>/create_review/',

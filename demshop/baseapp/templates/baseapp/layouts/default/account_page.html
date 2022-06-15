@@ -29,7 +29,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ps-2">
         <div class="container-fluid">
 
-            <a class="navbar-brand" href="{% url 'main' %}">
+            <a class="navbar-brand" href="{% url 'shop:main' %}">
                 {% trans 'Home' %}
             </a>
 
@@ -76,6 +76,14 @@
                     {% if request.user.is_authenticated %}
                     <li class="nav-item nav-link">
                         {{ request.user.username }} ({{ request.user.email }})
+                    </li>
+                    {% endif %}
+
+                    {% if request.user.is_superuser %}
+                    <li class="nav-item">
+                        <a href="{% url 'adminapp:user_list' %}" class="nav-link">
+                            {% trans 'Admin pannel' %}
+                        </a>
                     </li>
                     {% endif %}
                 </ul>
