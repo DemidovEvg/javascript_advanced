@@ -17,15 +17,20 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Product',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=255, unique=True, verbose_name='Название товара')),
-                ('rating', models.IntegerField(blank=True, choices=[(1, 1), (2, 2), (3, 3), (4, 4), (5, 5)], null=True, verbose_name='Оценка')),
-                ('short_description', models.CharField(max_length=128, verbose_name='Короткое описание')),
-                ('description', models.TextField(blank=True, null=True, verbose_name='Описание')),
-                ('price', models.DecimalField(decimal_places=3, max_digits=15, verbose_name='Цена')),
-                ('date_updated', models.DateField(auto_now=True, verbose_name='Дата изменения записи')),
-                ('img', models.ImageField(upload_to='img/%Y/%m/%d/', verbose_name='Изображение товара')),
-                ('quantity', models.PositiveIntegerField(verbose_name='Количество')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
+                ('title', models.CharField(max_length=255,
+                 unique=True, verbose_name='Название товара')),
+                ('rating', models.IntegerField(blank=True, choices=[
+                 (1, 1), (2, 2), (3, 3), (4, 4), (5, 5)], null=True, verbose_name='Оценка')),
+                ('description', models.TextField(
+                    blank=True, null=True, verbose_name='Описание')),
+                ('price', models.DecimalField(
+                    decimal_places=3, max_digits=15, verbose_name='Цена')),
+                ('date_updated', models.DateField(
+                    auto_now=True, verbose_name='Дата изменения записи')),
+                ('img', models.ImageField(upload_to='img/%Y/%m/%d/',
+                 verbose_name='Изображение товара')),
             ],
             options={
                 'verbose_name': 'Продукт',
@@ -36,9 +41,12 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='ProductCategory',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, verbose_name='Категория товара')),
-                ('slug', models.SlugField(max_length=255, unique=True, verbose_name='URL')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
+                ('name', models.CharField(max_length=255,
+                 verbose_name='Категория товара')),
+                ('slug', models.SlugField(max_length=255,
+                 unique=True, verbose_name='URL')),
             ],
             options={
                 'verbose_name': 'Категория товара',
@@ -49,11 +57,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Review',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('review', models.TextField(verbose_name='Отзыв')),
-                ('date_update', models.DateTimeField(auto_now=True, verbose_name='Дата отзыва')),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='shop.product', verbose_name='Товар')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='Пользователь')),
+                ('date_update', models.DateTimeField(
+                    auto_now=True, verbose_name='Дата отзыва')),
+                ('product', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='shop.product', verbose_name='Товар')),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                 to=settings.AUTH_USER_MODEL, verbose_name='Пользователь')),
             ],
             options={
                 'verbose_name': 'Отзыв',
@@ -64,15 +76,20 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='product',
             name='category',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='shop.productcategory', verbose_name='Категория товара'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                                    to='shop.productcategory', verbose_name='Категория товара'),
         ),
         migrations.CreateModel(
             name='BasketRecord',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('count', models.PositiveSmallIntegerField(verbose_name='Количество')),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='shop.product', verbose_name='Товар')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='Пользователь')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
+                ('count', models.PositiveSmallIntegerField(
+                    verbose_name='Количество')),
+                ('product', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='shop.product', verbose_name='Товар')),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                 to=settings.AUTH_USER_MODEL, verbose_name='Пользователь')),
             ],
             options={
                 'verbose_name': 'Запись в корзине',

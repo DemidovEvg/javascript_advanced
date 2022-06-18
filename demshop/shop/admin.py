@@ -28,7 +28,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'id',
         'title',
-        'date_updated'
+        'date_updated',
     )
 
     list_display_links = (
@@ -36,6 +36,14 @@ class ProductAdmin(admin.ModelAdmin):
         'title',
     )
 
+    save_on_top = True
+
+
+@admin.register(Buyer)
+class BuyertAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+    )
     save_on_top = True
 
 

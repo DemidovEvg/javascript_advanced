@@ -1,0 +1,1 @@
+[{"model": "shop.review", "pk": 5, "fields": {"user": 1, "product": 2, "review": "fghjfghjg", "date_update": "2022-05-21T14:40:31.046"}}]

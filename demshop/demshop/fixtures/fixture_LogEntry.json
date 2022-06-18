@@ -1,0 +1,1 @@
+[{"model": "admin.logentry", "pk": 43, "fields": {"action_time": "2022-06-18T19:21:41.938", "user": 6, "content_type": 7, "object_id": "5", "object_repr": "l-1001", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u043a\\u0443\\u043f\\u0430\\u0442\\u0435\\u043b\\u044c\"]}}]"}}]

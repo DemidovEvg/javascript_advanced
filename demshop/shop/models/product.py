@@ -54,7 +54,12 @@ class Product(models.Model):
 
     quantity = models.PositiveIntegerField(
         verbose_name='Количество',
-        
+
+    )
+
+    buyer = models.ManyToManyField(
+        'Buyer',
+        verbose_name='Покупатель',
     )
 
     def get_absolute_url(self):
