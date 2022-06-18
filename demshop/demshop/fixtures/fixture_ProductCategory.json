@@ -1,1 +1,1 @@
-[{"model": "shop.productcategory", "pk": 5, "fields": {"name": "Велосипеды", "slug": "bike"}}]
+[{"model": "shop.productcategory", "pk": 5, "fields": {"name": "Велосипеды", "slug": "bike"}}, {"model": "shop.productcategory", "pk": 3, "fields": {"name": "Кухонная утварь", "slug": "kuhonnaya-utvar"}}, {"model": "shop.productcategory", "pk": 1, "fields": {"name": "Лампы", "slug": "lampy"}}]

@@ -1,1 +1,1 @@
-[{"model": "auth.permission", "pk": 41, "fields": {"name": "Can add activation", "content_type": 11, "codename": "add_activation"}}]
+[{"model": "auth.permission", "pk": 41, "fields": {"name": "Can add activation", "content_type": 11, "codename": "add_activation"}}, {"model": "auth.permission", "pk": 42, "fields": {"name": "Can change activation", "content_type": 11, "codename": "change_activation"}}, {"model": "auth.permission", "pk": 43, "fields": {"name": "Can delete activation", "content_type": 11, "codename": "delete_activation"}}]

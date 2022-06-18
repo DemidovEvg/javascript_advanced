@@ -1,1 +1,1 @@
-[{"model": "shop.review", "pk": 5, "fields": {"user": 1, "product": 2, "review": "fghjfghjg", "date_update": "2022-05-21T14:40:31.046"}}]
+[{"model": "shop.review", "pk": 5, "fields": {"user": 1, "product": 2, "review": "fghjfghjg", "date_update": "2022-05-21T14:40:31.046"}}, {"model": "shop.review", "pk": 6, "fields": {"user": 1, "product": 2, "review": "iopiojp", "date_update": "2022-05-21T14:41:40.579"}}, {"model": "shop.review", "pk": 1, "fields": {"user": 1, "product": 2, "review": "Супер стул, даже вставать не хочется.", "date_update": "2022-05-21T14:46:07.402"}}]

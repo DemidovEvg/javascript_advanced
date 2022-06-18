@@ -52,16 +52,31 @@ class Command(BaseCommand):
                      model,
                      max_element_per_table,
                      verbosity):
-
-        if not getattr(model, 'objects'):
+        try:
+            queryset = model.objects.all()
+        except Exception as e:
+            self.print_log(
+                message=e,
+                current_verbosity=verbosity,
+                threshold=2
+            )
             return []
-
-        queryset = model.objects.all()
 
         if queryset.exists():
             return queryset[0:max_element_per_table]
         else:
             return []
+
+    def create_fixture_file(self, elements, filename):
+        with open(filename, 'w', encoding='utf8') as f:
+            data = serializers.serialize('json', elements)
+            f.write(data)
+
+    def print_log(self, message, current_verbosity, threshold):
+        if current_verbosity >= threshold:
+            self.stdout.write(
+                str(message),
+                ending='\n')
 
     def handle(self, *args, **options):
         verbosity = options['command_verbosity']
@@ -70,10 +85,11 @@ class Command(BaseCommand):
         model_processed = 0
 
         for model in self.get_list_of_models():
-
-            if verbosity > 0:
-                self.stdout.write('try get objects from: ' +
-                                  str(model), ending='\n')
+            self.print_log(
+                message='try get objects from: ' + str(model),
+                current_verbosity=verbosity,
+                threshold=1
+            )
             try:
                 elements = self.get_elements(
                     model,
@@ -82,31 +98,42 @@ class Command(BaseCommand):
 
                 model_processed += 1
 
-                if verbosity > 1:
-                    self.stdout.write(str(elements), ending='\n')
-
-                filename = path_to_fixtures + '\\fixture_' + model.__name__ + '.json'
+                self.print_log(
+                    message=elements,
+                    current_verbosity=verbosity,
+                    threshold=2
+                )
 
                 if elements:
-                    with open(filename, 'w', encoding='utf8') as f:
-                        data = serializers.serialize('json', elements)
-                        f.write(data)
-                        created_file += 1
+                    filename = path_to_fixtures + '\\fixture_' + model.__name__ + '.json'
+                    self.create_fixture_file(elements, filename)
+                    created_file += 1
 
-                if verbosity > 0:
-                    self.stdout.write(
-                        '{0} elements add to {1}'.format(
+                self.print_log(
+                    message='{0} elements add to {1}'.format(
                             len(elements),
-                            filename),
-                        ending='\n'
-                    )
+                            filename
+                    ),
+                    current_verbosity=verbosity,
+                    threshold=1
+                )
 
             except Exception as e:
-                self.stdout.write(str(e), ending='\n')
+                self.print_log(
+                    message=e,
+                    current_verbosity=verbosity,
+                    threshold=1
+                )
+            self.print_log(
+                message='============================================',
+                current_verbosity=verbosity,
+                threshold=0
+            )
 
-        if verbosity > 0:
-            self.stdout.write(
-                'created fixtures = {0}, model processed = {1}'.format(
-                    created_file,
-                    model_processed),
-                ending='\n')
+        self.print_log(
+            message='created fixtures = {0}, model processed = {1}'.format(
+                created_file,
+                model_processed),
+            current_verbosity=verbosity,
+            threshold=1
+        )
